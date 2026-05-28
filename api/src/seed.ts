@@ -1,5 +1,4 @@
-import { pool } from './src/config/db';
-import { initDb } from './src/config/db';
+import { pool, initDb } from './config/db';
 
 async function seed() {
   try {
