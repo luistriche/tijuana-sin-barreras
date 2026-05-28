@@ -10,7 +10,12 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    'https://tijuana-sin-barreras.vercel.app',
+    'https://tijuana-sin-barreras-1muwo8q3i-luistriches-projects.vercel.app',
+  ],
+}));
 app.use(express.json());
 
 app.use('/api/barriers', barrierRoutes);
